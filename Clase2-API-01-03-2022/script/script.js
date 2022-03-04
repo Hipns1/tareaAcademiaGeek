@@ -45,8 +45,8 @@ const showMovies = (movies) => {
             <h1>${name}</h1>
             <h2>${gender}</h2>
             <h2>${status} - ${species}</h2>
-            <h4>Ultima ubicación conocida:<h3>${location.name}</h3></h4> 
-            <h4>Primera vez visto:<h3>${origin.name}</h3> </h4>
+            <h4>Last known location:<h3>${location.name}</h3></h4> 
+            <h4>First time seen:<h3>${origin.name}</h3> </h4>
             
         </div>
         `
