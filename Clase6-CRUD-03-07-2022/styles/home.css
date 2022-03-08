@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: #4618AC;
+}
+#barraNav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #341479;
+    height: 70px;
+    align-items: center;
+}
+#barraNav img{
+    height: 40px;
+    margin-left: 150px;
+}
+#barraNav form{
+    margin-right: 150px;
+}
+
+#barraNav  input{
+    margin: auto;
+    height: 50px;
+    width: 350px;
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid white;
+}
+#barraNav input[type="text" i] {
+    padding: 1px 20px;
+}
+
+#container-slider{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    height: 220px;
+}
+#videojuegos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    height: 460px;
+    width: 250px;
+    margin: 20px 40px;
+    border-radius: 5px;
+    background-color: #260f58;
+}
+.imgContainer{
+    width: 100%;
+    height: 340px;
+    display: flex;
+    justify-content: space-around;
+}
+.cardImg{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.contentImg{
+    object-fit: cover;
+}
+.cardOverlay{
+    width: 90%;
+    margin: auto;
+}
+.cardOverlay h5{ 
+    margin-top: 5px;
+    font-size: 15px;
+    color: white;
+    margin-top: 7px;
+}
+.cardOverlay h2{
+    font-size: 15px;
+    color: #00CF9F;
+    margin-top: 5px;
+}
+.cardOverlay h1{
+    color: rgba(255,255,255,0.5);
+    font-size: 15px;
+    margin-top: 5px;
+}
+.precioText {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+.footerContainer{
+    background-color: #260f58;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footerContainer a{
+    margin-left: 40%;
+    margin-right: 40%;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+@media(max-width:1000px){
+    #barraNav form{
+        margin-right: 10px;
+    }
+    #barraNav img{
+        margin-left: 10px;
+    }
+    #container-slider img{
+        height: 80%;
+    }
+}
+@media(max-width:600px){
+    #barraNav form{
+        margin-right: 10px;
+    }
+    #container-slider img{
+        height: 60%;
+    }
+    .navFooter a{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+
