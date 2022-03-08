@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nunito" />
+    <link rel="stylesheet" href="styles/home.css">
+    <title></title>
+</head>
+
+<body id="home"> 
+    <nav id="barraNav">
+        <img src="https://i.ibb.co/b1hVKjQ/1280px-Play-Station-logo-and-wordmark-svg-1.png"  id="logo">
+        <form id="form">
+            <input type="text" id="search" class="search" placeholder="Search" />
+        </form>
+    </nav>
+
+    <div id="container-slider">
+        <img name="slider" id="slider"></img>
+    </div>
+    
+    <main>
+        <div >
+            <div class="grid-elementos" id="videojuegos">
+                
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <nav >
+            <div class="footerContainer" >
+                <a " aria-current="page" href="index.html" tabindex="-1"> 
+                    Home
+                </a>
+                <a  aria-current="page" href="crud.html" tabindex="-1">
+                    CRUD
+                </a>
+            </div>
+        </nav>
+    </footer>
+    
+    <script src="./scripts/getJuegos.js"></script>
+</body> 
+
+</html>
+
+
+<!-- ARRANCAR SERVIDOR -->
+<!-- json-server --watch data/bdMarvel.json --port 4000 -->
+<!-- json-server --watch data/bdDc.json --port 4001 -->

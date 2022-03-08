@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de usuario</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nunito" />
+    <link rel="stylesheet" href="styles/crud.css">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+
+<body>
+    <main>
+
+        <div class="crudContainer">
+
+            <div class="usuario">
+                <h1>CRUD Juegos</h1>
+            </div>
+
+
+            <form id="formulario">
+                <div class="campo">
+                    <label for="name" >Nombre:</label>
+                    <input id="name" name="name" type="text">
+                </div>
+                <div class="campo">
+                    <label for="precio" >Precio:</label>
+                    <input id="precio" name="precio" type="text">
+                </div>
+                <div class="campo">
+                    <div id="imagenCrud"></div>
+                    <label for="imagen" >URL de imagen:</label>
+                    <input id="imagen" name="imagen" type="text">
+                </div>
+                <div class="campo">
+                    <label id="idEdit" for="id" >Id:</label>
+                    <input id="id" name="id" type="text" readonly>
+                </div>
+                <!-- botones -->
+                <div class="btnContainer">
+
+                    <button id="btnGuardar" type="submit">Guardar</button>
+                    <button id="btnCorreo" type="button">Buscar por Nombre</button>
+                    <button id="btnEditar" type="button">Editar</button>
+                    <button id="btnEliminar" type="button">Eliminar</button>
+
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+    <footer>
+        <nav class="navContainer">
+            <div class="navFooter">
+                <a class="nav-link active" aria-current="page" href="index.html" tabindex="-1"> Home
+                    <!-- <img class="icono-activo-home" src="https://i.ibb.co/2ZcsN2F/home.png" alt="" width="24"
+                        height="24"> -->
+                </a>
+                <a class="nav-link" aria-current="page" href="crud.html" tabindex="-1">
+                    CRUD
+                    <!-- <img src="https://i.ibb.co/3RMCBkL/Component-2.png" alt="" width="24" height="24"> -->
+                </a>
+            </div>
+        </nav>
+    </footer>
+
+    <script src="./scripts/crud.js"></script>
+</body>
+
+</html>
