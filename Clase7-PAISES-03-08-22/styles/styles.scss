@@ -1,0 +1,157 @@
+//COLORES
+
+//DARKMODE
+//Dark Blue (Dark Mode Elements): 
+$elements-dark:hsl(209, 23%, 22%);
+//Very Dark Blue (Dark Mode Background): 
+$bg-dark: hsl(207, 26%, 17%);
+//White (Dark Mode Text & Light Mode Elements): 
+$text-dark:hsl(0, 0%, 100%);
+
+
+//LIGHTMODE
+//Very Dark Blue (Light Mode Text): 
+$text-light:hsl(200, 15%, 8%);
+//Dark Gray (Light Mode Input): 
+$input-light:hsl(0, 0%, 52%);
+//Very Light Gray (Light Mode Background): 
+$bg-light: hsl(0, 0%, 98%);
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+
+//NAVBAR
+body{
+    width: 100%;
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navContainer{
+    width: 100%;
+    padding: 20px 0px;
+    body.light &{
+        background-color: $text-dark; 
+    }
+    body.dark &{
+        background-color: $elements-dark;
+    }
+    
+}
+.navBar h1{
+    margin-left: 80px;
+    body.light &{
+        color: $text-light;
+    }
+    body.dark &{
+        color: $text-dark;
+    }
+}
+.themeContainer{
+    margin-right: 80px;
+    body.light &{
+        color: $text-light;
+    }
+    body.dark &{
+        color: $text-dark;
+    }
+}
+
+
+//BUSQUEDA
+.containerBusqueda{
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 0px;
+    body.light &{
+        background-color: $bg-light;
+    }
+    body.dark &{
+        background-color: $bg-dark;
+    }
+}
+#inputBusqueda{
+    margin-left: 80px;
+}
+#selectContainer{
+    margin-right: 80px; 
+    max-width: 250px;
+	position: relative;
+}
+#selecContainer option{
+    height: 100px;   
+}
+
+.bodyContainer{
+    height: 100vh;
+    body.light &{
+        background-color: $bg-light;
+    }
+    body.dark &{
+        background-color: $bg-dark;
+    }
+}
+.containerBusqueda input{
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 94px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 94px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 94px 1px rgba(0,0,0,0.2);
+    body.light &{
+        background-color: $text-dark; 
+    }
+    body.dark &{
+        background-color: $elements-dark;
+    }
+}
+::placeholder{
+    body.light &{
+        color: $text-light; 
+    }
+    body.dark &{
+        color: $text-dark;
+    }
+}
+input[type="text"] {
+    padding: 10px 20px;
+}
+.containerBusqueda select{
+    width: 15%;
+    height: 50px;
+    display: inline-block;
+	cursor: pointer;
+    padding: 7px 10px;
+	background: #f0f0f0;
+	color: #7b7b7b;
+	font-size: 1em;
+	color: #999;
+    position: relative;
+    transition: all 0.25s ease;
+    border: none;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 94px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 94px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 94px 1px rgba(0,0,0,0.2);
+
+    body.light &{
+        background-color: $text-dark; 
+        color: $text-light;
+    }
+    body.dark &{
+        background-color: $elements-dark;
+        color: $text-dark;
+    }
+}
