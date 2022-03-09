@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+.navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navContainer {
+  width: 100%;
+  padding: 20px 0px;
+}
+
+body.light .navContainer {
+  background-color: white;
+}
+
+body.dark .navContainer {
+  background-color: #2b3945;
+}
+
+.navBar h1 {
+  margin-left: 80px;
+}
+
+body.light .navBar h1 {
+  color: #111517;
+}
+
+body.dark .navBar h1 {
+  color: white;
+}
+
+.themeContainer {
+  margin-right: 80px;
+}
+
+body.light .themeContainer {
+  color: #111517;
+}
+
+body.dark .themeContainer {
+  color: white;
+}
+
+.containerBusqueda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 45px 0px;
+}
+
+body.light .containerBusqueda {
+  background-color: #fafafa;
+}
+
+body.dark .containerBusqueda {
+  background-color: #202c37;
+}
+
+#inputBusqueda {
+  margin-left: 80px;
+}
+
+#selectContainer {
+  margin-right: 80px;
+  max-width: 250px;
+  position: relative;
+}
+
+#selecContainer option {
+  height: 100px;
+}
+
+.bodyContainer {
+  height: 100vh;
+}
+
+body.light .bodyContainer {
+  background-color: #fafafa;
+}
+
+body.dark .bodyContainer {
+  background-color: #202c37;
+}
+
+.containerBusqueda input {
+  width: 30%;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 94px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 94px 1px rgba(0, 0, 0, 0.2);
+}
+
+body.light .containerBusqueda input {
+  background-color: white;
+}
+
+body.dark .containerBusqueda input {
+  background-color: #2b3945;
+}
+
+body.light ::-webkit-input-placeholder {
+  color: #111517;
+}
+
+body.light :-ms-input-placeholder {
+  color: #111517;
+}
+
+body.light ::-ms-input-placeholder {
+  color: #111517;
+}
+
+body.light ::placeholder {
+  color: #111517;
+}
+
+body.dark ::-webkit-input-placeholder {
+  color: white;
+}
+
+body.dark :-ms-input-placeholder {
+  color: white;
+}
+
+body.dark ::-ms-input-placeholder {
+  color: white;
+}
+
+body.dark ::placeholder {
+  color: white;
+}
+
+input[type="text"] {
+  padding: 10px 20px;
+}
+
+.containerBusqueda select {
+  width: 15%;
+  height: 50px;
+  display: inline-block;
+  cursor: pointer;
+  padding: 7px 10px;
+  background: #f0f0f0;
+  color: #7b7b7b;
+  font-size: 1em;
+  color: #999;
+  position: relative;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  border: none;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 94px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 94px 1px rgba(0, 0, 0, 0.2);
+}
+
+body.light .containerBusqueda select {
+  background-color: white;
+  color: #111517;
+}
+
+body.dark .containerBusqueda select {
+  background-color: #2b3945;
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */
