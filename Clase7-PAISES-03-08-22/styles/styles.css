@@ -35,6 +35,36 @@ body.dark .navContainer {
   background-color: #2b3945;
 }
 
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#imgTheme {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+#imgThemeDark {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+#themeBtn {
+  display: none;
+}
+
+.textMode {
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .navBar h1 {
   margin-left: 80px;
 }
@@ -89,10 +119,6 @@ body.dark .containerBusqueda {
 
 #selecContainer option {
   height: 100px;
-}
-
-.bodyContainer {
-  height: 100vh;
 }
 
 body.light .bodyContainer {
@@ -162,10 +188,7 @@ input[type="text"] {
   display: inline-block;
   cursor: pointer;
   padding: 7px 10px;
-  background: #f0f0f0;
-  color: #7b7b7b;
   font-size: 1em;
-  color: #999;
   position: relative;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
@@ -183,5 +206,125 @@ body.light .containerBusqueda select {
 body.dark .containerBusqueda select {
   background-color: #2b3945;
   color: white;
+}
+
+#cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  margin: 30px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+body.light .card {
+  background-color: white;
+}
+
+body.dark .card {
+  background-color: #2b3945;
+}
+
+.card-body {
+  width: 100%;
+}
+
+.card-body img {
+  width: 100%;
+  height: 200px;
+}
+
+.bodyContainer {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.textContainer {
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+body.light .textContainer {
+  color: #111517;
+}
+
+body.dark .textContainer {
+  color: white;
+}
+
+.textContainer h5 {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.textContainer p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.btnDetail {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+}
+
+.btn-detail {
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+body.light .btn-detail {
+  color: #111517;
+  background-color: #fafafa;
+  border: 0.5px solid #111517;
+}
+
+body.dark .btn-detail {
+  color: white;
+  background-color: #202c37;
+  border: 0.5px solid white;
+}
+
+.btnDetail:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 /*# sourceMappingURL=styles.css.map */

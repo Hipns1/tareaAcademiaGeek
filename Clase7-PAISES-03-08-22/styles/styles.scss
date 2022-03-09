@@ -49,6 +49,28 @@ body{
     }
     
 }
+label{
+    display: flex;
+    align-items: center;
+}
+#imgTheme{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+#imgThemeDark{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+#themeBtn{
+    display: none;
+}
+.textMode{
+    font-weight: bold;
+    cursor: pointer;
+    
+}
 .navBar h1{
     margin-left: 80px;
     body.light &{
@@ -94,7 +116,6 @@ body{
 }
 
 .bodyContainer{
-    height: 100vh;
     body.light &{
         background-color: $bg-light;
     }
@@ -134,10 +155,7 @@ input[type="text"] {
     display: inline-block;
 	cursor: pointer;
     padding: 7px 10px;
-	background: #f0f0f0;
-	color: #7b7b7b;
 	font-size: 1em;
-	color: #999;
     position: relative;
     transition: all 0.25s ease;
     border: none;
@@ -154,4 +172,94 @@ input[type="text"] {
         background-color: $elements-dark;
         color: $text-dark;
     }
+}
+
+
+
+//CARTAS
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.card{
+    display: flex;
+    width: 300px;
+    margin: 30px;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+    body.light &{
+        background-color: $text-dark; 
+    }
+    body.dark &{
+        background-color: $elements-dark;
+    }
+}
+.card-body{
+    width: 100%;
+}
+.card-body img{
+    width: 100%;
+    height: 200px;
+}
+.bodyContainer{
+    object-fit: contain;
+}
+.textContainer{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    body.light &{
+        color: $text-light; 
+    }
+    body.dark &{
+        color: $text-dark;
+    }
+}
+.textContainer h5{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.textContainer p{
+    font-size: 12px;
+    margin-top: 5px;
+}
+.btnDetail{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+.btn-detail{
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+
+    body.light &{
+        color: $text-light;
+        background-color: $bg-light;
+        border: 0.5px solid $text-light;
+    }
+    body.dark &{
+        color: $text-dark;
+        background-color: $bg-dark;
+        border: 0.5px solid $text-dark;
+    }
+}
+.btnDetail:hover{
+    transform: scale(1.02);
 }

@@ -7,14 +7,19 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Document</title>
 </head>
-<body class="light">
+<body id="bodyTheme" class="light">
     
     <div class="navContainer">
         <nav class="navBar">
             <h1>Where in the world?</h1>
             <div class="themeContainer">
                 <input type="checkbox" id="themeBtn">
-                <label for="themeBtn">Dark mode</label>
+                
+                <label for="themeBtn" class="textMode">
+                    <img id="imgThemeDark" src="./styles/modeIconWhite.png" alt="">
+                    <img id="imgTheme" src="./styles/modeIcon.png" alt="">
+                    Dark mode
+                </label>
             </div>
         </nav>
     </div>
