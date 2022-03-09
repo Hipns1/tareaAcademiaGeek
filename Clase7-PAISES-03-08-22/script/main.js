@@ -7,7 +7,7 @@ const card = document.getElementById("cards");
 
 document.addEventListener("DOMContentLoaded", async() => {
   const countries = await getCountries(`${endpoint}all`);
-  const nuevoArray = countries.slice(60,80);
+  const nuevoArray = countries.slice(120,140);
   console.log(nuevoArray)
   showCountries(nuevoArray, card);
 });
@@ -61,11 +61,11 @@ const temaPredetermiado = () => {
   if(temaDetails === "dark"){
     document.getElementById("bodyTheme").classList = "dark";
     document.getElementById("imgTheme").style.display = "none";
-    document.getElementById("imgThemeWhite").style.display = "block"
+    document.getElementById("imgThemeDark").style.display = "block"
   }else{
     document.getElementById("bodyTheme").classList = "light";
     document.getElementById("imgTheme").style.display = "block";
-    document.getElementById("imgThemeWhite").style.display = "none";
+    document.getElementById("imgThemeDark").style.display = "none";
   }
 }
 document.addEventListener('DOMContentLoaded', temaPredetermiado);
@@ -78,12 +78,12 @@ themeBtn.addEventListener("click", () => {
     const themeDark = document.getElementById("bodyTheme").classList = "dark";
     localStorage.setItem("tema", JSON.stringify(themeDark));
     document.getElementById("imgTheme").style.display = "none";
-    document.getElementById("imgThemeWhite").style.display = "block"
+    document.getElementById("imgThemeDark").style.display = "block"
   }else{
     const themeLight = document.getElementById("bodyTheme").classList = "light";
     localStorage.setItem("tema", JSON.stringify(themeLight));
     document.getElementById("imgTheme").style.display = "block";
-    document.getElementById("imgThemeWhite").style.display = "none";
+    document.getElementById("imgThemeDark").style.display = "none";
   }
 })
 

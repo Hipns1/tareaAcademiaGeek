@@ -116,22 +116,36 @@ label{
 
 .card-body{
     display: flex;
+    justify-content: space-around ;
     align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
     width: 100%;
+    margin: auto;
     margin-top: 150px;
+    padding: 20px 20px;
+    
+
 }
-.card-body img{
+.contImg{
+    width: 50%;
+    display:flex;
+    justify-content: center;
+}
+.contImg img{
     height: 350px;
-    width: 100%;
-    margin-left: 200px;
+    width: 525px;
+    
+
 }
 .textDetails{
-    width: 100%;
+    width: 50%;
+   
 }
 .textDetails h5{
     font-size: 30px;
     margin-bottom: 15px;
+   
+    
     body.light &{
         color: $text-light;
     }

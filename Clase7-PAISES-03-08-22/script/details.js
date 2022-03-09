@@ -9,7 +9,9 @@ const showDetails = () => {
 	const card = `
       <div class="card">
         <div class="card-body" >
-            <img src=${svg} class="card-img-top" alt="${official}">
+            <div class="contImg">
+              <img src=${svg} class="card-img-top" alt="${official}">
+            </div>
             <div class="textDetails">
                 <h5 class="card-title">${official}</h5>
                 <p><b>Population:</b> ${population}</p>
