@@ -7,7 +7,7 @@ const card = document.getElementById("cards");
 
 document.addEventListener("DOMContentLoaded", async() => {
   const countries = await getCountries(`${endpoint}all`);
-  const nuevoArray = countries.slice(0,20);
+  const nuevoArray = countries.slice(60,80);
   console.log(nuevoArray)
   showCountries(nuevoArray, card);
 });
@@ -51,3 +51,39 @@ selectContainer.addEventListener("change", async () => {
     let selectedCountries = await getCountries(`${endpoint}region/${selectValue}`);
     showCountries(selectedCountries, card);
 })
+
+
+
+//ESCOGER TEMA PREDETERMINADO
+const temaPredetermiado = () => {
+  const temaDetails = JSON.parse(localStorage.getItem("tema"));
+  console.log(temaDetails)
+  if(temaDetails === "dark"){
+    document.getElementById("bodyTheme").classList = "dark";
+    document.getElementById("imgTheme").style.display = "none";
+    document.getElementById("imgThemeWhite").style.display = "block"
+  }else{
+    document.getElementById("bodyTheme").classList = "light";
+    document.getElementById("imgTheme").style.display = "block";
+    document.getElementById("imgThemeWhite").style.display = "none";
+  }
+}
+document.addEventListener('DOMContentLoaded', temaPredetermiado);
+
+//ESCOGER TEMA
+const themeBtn = document.getElementById("themeBtn")
+
+themeBtn.addEventListener("click", () => {
+  if(themeBtn.checked){
+    const themeDark = document.getElementById("bodyTheme").classList = "dark";
+    localStorage.setItem("tema", JSON.stringify(themeDark));
+    document.getElementById("imgTheme").style.display = "none";
+    document.getElementById("imgThemeWhite").style.display = "block"
+  }else{
+    const themeLight = document.getElementById("bodyTheme").classList = "light";
+    localStorage.setItem("tema", JSON.stringify(themeLight));
+    document.getElementById("imgTheme").style.display = "block";
+    document.getElementById("imgThemeWhite").style.display = "none";
+  }
+})
+

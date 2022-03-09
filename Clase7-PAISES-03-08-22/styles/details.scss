@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+//DARKMODE
+//Dark Blue (Dark Mode Elements): 
+$elements-dark:hsl(209, 23%, 22%);
+//Very Dark Blue (Dark Mode Background): 
+$bg-dark: hsl(207, 26%, 17%);
+//White (Dark Mode Text & Light Mode Elements): 
+$text-dark:hsl(0, 0%, 100%);
+
+
+//LIGHTMODE
+//Very Dark Blue (Light Mode Text): 
+$text-light:hsl(200, 15%, 8%);
+//Dark Gray (Light Mode Input): 
+$input-light:hsl(0, 0%, 52%);
+//Very Light Gray (Light Mode Background): 
+$bg-light: hsl(0, 0%, 98%);
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+
+//NAVBAR
+body{
+    width: 100%;
+    &.light {
+        background-color: $bg-light;
+    }
+    &.dark{
+        background-color: $bg-dark;
+    }
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navContainer{
+    width: 100%;
+    padding: 20px 0px;
+    body.light &{
+        background-color: $text-dark; 
+    }
+    body.dark &{
+        background-color: $elements-dark;
+    }
+    
+}
+label{
+    display: flex;
+    align-items: center;
+}
+#imgTheme{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+#imgThemeDark{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+#themeBtn{
+    display: none;
+}
+.textMode{
+    font-weight: bold;
+    cursor: pointer;
+}
+.navBar a{
+    text-decoration: none;
+    body.light &{
+        color: $text-light;
+    }
+    body.dark &{
+        color: $text-dark;
+    }
+}
+.navBar h1{
+    margin-left: 80px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+
+    body.light &{
+        color: $text-light;
+    }
+    body.dark &{
+        color: $text-dark;
+    }
+}
+.themeContainer{
+    margin-right: 80px;
+    body.light &{
+        color: $text-light;
+    }
+    body.dark &{
+        color: $text-dark;
+    }
+}
+
+
+.card-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 150px;
+}
+.card-body img{
+    height: 350px;
+    width: 100%;
+    margin-left: 200px;
+}
+.textDetails{
+    width: 100%;
+}
+.textDetails h5{
+    font-size: 30px;
+    margin-bottom: 15px;
+    body.light &{
+        color: $text-light;
+    }
+    body.dark &{
+        color: $text-dark;
+    }
+}
+.textDetails p{
+    font-size: 14px;
+    margin-top: 10px;
+    body.light &{
+        color: $text-light;
+    }
+    body.dark &{
+        color: $text-dark;
+    }
+}

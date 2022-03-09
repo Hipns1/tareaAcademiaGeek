@@ -11,20 +11,30 @@
 		<link rel="canonical" content="" />
 		<link rel="icon" href="" />
 		<link rel="apple-touch-icon" href="" />
-		<link rel="stylesheet" type="text/css" href="" />
+		<link rel="stylesheet" type="text/css" href="./styles/details.css" />
 	</head>
 
-	<body>
+	<body class="light" id="bodyTheme">
 		<div class="navContainer">
 			<nav class="navBar">
-				<a href="/">
-					<h1>Where in the world?</h1>
-				</a>
-				<input type="checkbox" id="themeBtn" />
-				<label for="themeBtn">Dark mode</label>
+				<a href="/"><h1>Where in the world?</h1></a>
+				<div class="themeContainer">
+					<input type="checkbox" id="themeBtn">
+					<label for="themeBtn" class="textMode">
+						<img id="imgThemeDark" src="./styles/modeIconWhite.png" alt="">
+						<img id="imgTheme" src="./styles/modeIcon.png" alt="">
+						Dark mode
+					</label>
+				</div>
 			</nav>
 		</div>
-		<div id="app"></div>
+
+
+		<div id="app">
+			
+		</div>
+
+		
 		<script src="./script/details.js"></script>
 	</body>
 </html>
