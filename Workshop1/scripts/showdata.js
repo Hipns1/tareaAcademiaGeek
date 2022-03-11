@@ -4,8 +4,8 @@ const showData = async (arrProductos, cards) => {
     const { name, precio, imagen, descripcion, id } = product;
     cards.innerHTML += `
     <div> ${name} ${precio} 
-     <a href="" id="${id}"><img src="${imagen}" alt="imagen"></a>
-    </div>
+    <a><img id=${id} class="btnimagen" src="${imagen}" alt="imagen"></a>
+    ${descripcion}</div>
     `;
   });
 };
