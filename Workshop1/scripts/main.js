@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded",async () => {
 }
 )
 
+//change
+
 // const agregaracarro = document.getElementById("botonCarro").addEventListener("click", () => {
 
 //     registro.push(
