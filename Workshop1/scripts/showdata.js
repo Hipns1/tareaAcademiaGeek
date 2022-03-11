@@ -1,4 +1,4 @@
-export const showData = async (arrProductos, cards) => {
+const showData = async (arrProductos, cards) => {
   const productos = await arrProductos;
   productos.forEach((product) => {
     const { name, precio, imagen, descripcion } = product;
@@ -7,3 +7,4 @@ export const showData = async (arrProductos, cards) => {
     `;
   });
 };
+export default showData
