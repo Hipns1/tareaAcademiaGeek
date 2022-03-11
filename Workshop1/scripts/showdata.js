@@ -3,7 +3,9 @@ export const showData = async (arrProductos, cards) => {
   productos.forEach((product) => {
     const { name, precio, imagen, descripcion } = product;
     cards.innerHTML += `
-    <div> ${name} ${precio} ${imagen} ${descripcion}</div>
+    <div> ${name} ${precio} 
+    <img src="${imagen}" alt="imagen">
+    ${descripcion}</div>
     `;
   });
 };
