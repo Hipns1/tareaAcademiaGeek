@@ -5,8 +5,8 @@ const showData = async (arrProductos, cards) => {
     cards.innerHTML += `
     <div> ${name} ${precio} 
     <img src="${imagen}" alt="imagen">
-    ${descripcion}</div>
+    </div>
     `;
   });
 };
-export default showData
+export default showData;
