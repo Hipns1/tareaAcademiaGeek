@@ -74,19 +74,40 @@ const mostrarProducto = async (producto, card) => {
   const btnComprar = document
     .getElementById('btnComprar')
     .addEventListener('click', (e) => {
-      console.log('hola');
+    const productosCarrito = JSON.parse(localStorage.getItem('productos'));
+    console.log(productosCarrito)
+    const modalCarrito = document.getElementById("modalCarrito")
+    productosCarrito.forEach((product) => {
+      const { name, precio, imagen, id } = product;
+      modalCarrito.innerHTML += `
+      <div class="cardContainer">
+        <div class="cards">
+          <div class="imgCard">
+            <a href="#home"><img id=${id} class="btnimagen" src="${imagen}" alt="imagen"></a>
+          </div>
+          <h2>${name}</h2>
+          <h3>${precio}</h3>
+        </div>
+      </div>
+      `;
     });
+  });
 };
 
-// const getLocalStorage = () => {
-//   let traerProductos = JSON.parse(localStorage.getItem('productos'));
-//   const key = JSON.parse(localStorage.getItem('citas'));
-//   if (key !== null) {
-//     key.unshift(registrarCita);
-//     localStorage.setItem('citas', JSON.stringify(key));
-//   } else {
-//     citas.unshift(registrarCita);
-//     localStorage.setItem('citas', JSON.stringify(citas));
-//   }
-//   console.log(traerProductos);
-// };
+const getLocalStorage = () => {
+  let traerProductos = JSON.parse(localStorage.getItem('productos'));
+  const modalCarrito = document.getElementById("modalCarrito")
+    traerProductos.forEach((product) => {
+      const { name, precio, imagen, id } = product;
+      modalCarrito.innerHTML += `
+      <div class="cardContainer">
+        <div class="cards">
+          <div class="imgCard">
+            <a href="#home"><img id=${id} class="btnimagen" src="${imagen}" alt="imagen"></a>
+          </div>
+          <h2>${name}</h2>
+          <h3>${precio}</h3>
+        </div>
+      </div>
+      `;
+})};
