@@ -15,4 +15,4 @@ const showData = async (arrProductos, cards) => {
     `;
   });
 };
-export default showData
+export default showData;
