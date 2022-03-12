@@ -28,7 +28,6 @@ divcards.addEventListener('click', async (e) => {
 const mostrarProducto = async (producto, card) => {
   card.innerHTML = '';
   const productoseleccionado = await producto;
-  console.log(productoseleccionado);
   const { name, precio, imagen, descripcion, id } = productoseleccionado;
   document.getElementById('bannerContainer').style.display = 'none';
   card.innerHTML += `
