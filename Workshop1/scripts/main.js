@@ -74,8 +74,23 @@ const mostrarProducto = async (producto, card) => {
   const btnComprar = document
     .getElementById('btnComprar')
     .addEventListener('click', (e) => {
-      console.log('hola');
+    const productosCarrito = JSON.parse(localStorage.getItem('productos'));
+    const 
+    productosCarrito.forEach((product) => {
+      const { name, precio, imagen, id } = product;
+      cards.innerHTML += `
+      <div class="cardContainer">
+        <div class="cards">
+          <div class="imgCard">
+            <a href="#home"><img id=${id} class="btnimagen" src="${imagen}" alt="imagen"></a>
+          </div>
+          <h2>${name}</h2>
+          <h3>${precio}</h3>
+        </div>
+      </div>
+      `;
     });
+  });
 };
 
 // const getLocalStorage = () => {
