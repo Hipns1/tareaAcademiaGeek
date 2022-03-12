@@ -84,8 +84,13 @@ const mostrarProducto = async (producto, card) => {
             <div class="imgCardCarrito">
               <img class="btnimagen" src="${imagen}" alt="imagen">
             </div>
-            <h2>${name}</h2>
-            <h3>${precio}</h3>
+            <div class="productoTagsContainer">
+              <h2>${name}</h2>
+              <h3>${precio}</h3>
+            </div>
+            <div class="btnRemoveContainer">
+              <button class="btnRemove">Remove</button>
+            </div>
           </div>
         </div>
         `;
@@ -129,6 +134,7 @@ const mostrarProducto = async (producto, card) => {
 const getLocalStorage = () => {
   let traerProductos = JSON.parse(localStorage.getItem('productos'));
   const modalCarrito = document.getElementById("modalCarrito")
+    modalCarrito.innerHTML=""
     traerProductos.forEach((product) => {
       const { name, precio, imagen, id } = product;
       modalCarrito.innerHTML += `
@@ -137,8 +143,13 @@ const getLocalStorage = () => {
             <div class="imgCardCarrito">
               <img class="btnimagen" src="${imagen}" alt="imagen">
             </div>
-            <h2>${name}</h2>
-            <h3>${precio}</h3>
+            <div class="productoTagsContainer">
+              <h2>${name}</h2>
+              <h3>${precio}</h3>
+            </div>
+            <div class="btnRemoveContainer">
+              <button class="btnRemove">Remove</button>
+            </div>
           </div>
         </div>
         `;
