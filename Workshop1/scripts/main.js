@@ -77,13 +77,14 @@ const mostrarProducto = async (producto, card) => {
     const productosCarrito = JSON.parse(localStorage.getItem('productos'));
     console.log(productosCarrito)
     const modalCarrito = document.getElementById("modalCarrito")
+    modalCarrito.innerHTML= ""
     productosCarrito.forEach((product) => {
       const { name, precio, imagen, id } = product;
       modalCarrito.innerHTML += `
       <div class="cardContainer">
         <div class="cards">
-          <div class="imgCard">
-            <a href="#home"><img id=${id} class="btnimagen" src="${imagen}" alt="imagen"></a>
+          <div class="imgCardCarrito">
+          <img class="btnimagen" src="${imagen}" alt="imagen">
           </div>
           <h2>${name}</h2>
           <h3>${precio}</h3>
@@ -97,17 +98,18 @@ const mostrarProducto = async (producto, card) => {
 const getLocalStorage = () => {
   let traerProductos = JSON.parse(localStorage.getItem('productos'));
   const modalCarrito = document.getElementById("modalCarrito")
+    modalCarrito.innerHTML=""
     traerProductos.forEach((product) => {
       const { name, precio, imagen, id } = product;
       modalCarrito.innerHTML += `
-      <div class="cardContainer">
-        <div class="cards">
-          <div class="imgCard">
-            <a href="#home"><img id=${id} class="btnimagen" src="${imagen}" alt="imagen"></a>
+        <div class="cardContainerCarrito">
+          <div class="cardsCarrito">
+            <div class="imgCardCarrito">
+              <img class="btnimagen" src="${imagen}" alt="imagen">
+            </div>
+            <h2>${name}</h2>
+            <h3>${precio}</h3>
           </div>
-          <h2>${name}</h2>
-          <h3>${precio}</h3>
         </div>
-      </div>
-      `;
+        `;
 })};
