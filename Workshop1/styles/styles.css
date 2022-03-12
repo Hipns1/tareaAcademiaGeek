@@ -76,14 +76,26 @@ body {
 
 .bannerContainer {
   margin-top: 20px;
-  height: 800px;
   width: 90%;
   margin: auto;
-  background-image: url(./cover.png);
+  background-size: cover;
 }
 
-.productContainer {
-  border: 2px solid red;
+.bannerContainer img {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .textNavBar h1 {
+    display: none;
+  }
+  .navBar img {
+    height: 40px;
+    margin-left: 20px;
+  }
+  .iconsNavBar {
+    margin-right: 20px;
+  }
 }
 
 .footerContainer footer {
@@ -131,23 +143,21 @@ body {
   color: blue;
 }
 
-.productShow {
-  border: 2px solid green;
-}
-
 .productContainer {
-  border: 2px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 90%;
   margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .cardContainer {
+  width: 340px;
+  height: 611px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,10 +165,48 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 2px solid forestgreen;
+  margin: 30px 100px;
 }
 
-.cardContainer img {
-  height: 200px;
+.cardContainer h2 {
+  margin-top: 20px;
+  text-align: center;
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+}
+
+.cardContainer h3 {
+  text-align: center;
+  text-align: center;
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+}
+
+.imgCard {
+  width: 340px;
+  height: 511px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.imgCard img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.productShow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=styles.css.map */
