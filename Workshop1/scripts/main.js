@@ -54,7 +54,7 @@ const mostrarProducto = async (producto, card) => {
             </form>
             <div class="btnDetail">
                 <button id="btnAgregar"  class="btnAgregar">Add to Cart</button>
-                <button id="btnComprar" data-mdb-target="#exampleModal" data-mdb-toggle="modal" class="btnComprar">But it Now</button>
+                <button id="btnComprar" data-mdb-target="#exampleModal" data-mdb-toggle="modal" class="btnComprar">Buy it Now</button>
             </div>
             <h3>${descripcion}</h3>
             <h4>Click for Sizing!</h4>
@@ -62,13 +62,13 @@ const mostrarProducto = async (producto, card) => {
     </div>
     `;
 
+
     const btnAgregar = document.getElementById('btnAgregar')
     btnAgregar.addEventListener('click', (e) => {
         registro.unshift(productoseleccionado)
         localStorage.setItem('productos', JSON.stringify(registro));
     });
 
-   
 
 
     const btnCarrito = document.getElementById("carrito");
@@ -92,39 +92,12 @@ const mostrarProducto = async (producto, card) => {
       });
     })
 
-
-
-   /*  const btnComprar = document.getElementById('btnComprar') */
-    
-    
-    /* btnComprar.addEventListener('click', (e) => {
-      const productosCarrito = JSON.parse(localStorage.getItem('productos'));
-      console.log(productosCarrito)
-      const modalCarrito = document.getElementById("modalCarrito")
-      productosCarrito.forEach((product) => {
-        const { name, precio, imagen, id } = product;
-        modalCarrito.innerHTML += `
-        <div class="cardContainerCarrito">
-          <div class="cardsCarrito">
-            <div class="imgCardCarrito">
-              <a href="#home"><img id=${id} class="btnimagen" src="${imagen}" alt="imagen"></a>
-            </div>
-            <h2>${name}</h2>
-            <h3>${precio}</h3>
-          </div>
-        </div>
-        `;
-      });
-    }); */
+    const btnComprar = document.getElementById('btnComprar');
+      btnComprar.addEventListener('click', () => {
+        btnAgregar.click();
+        btnCarrito.click();
+      }); 
 };
-
-
-
-
-
-
-
-
 
 const getLocalStorage = () => {
   let traerProductos = JSON.parse(localStorage.getItem('productos'));
@@ -142,4 +115,5 @@ const getLocalStorage = () => {
           </div>
         </div>
         `;
-})};
+    }
+  )}; 
