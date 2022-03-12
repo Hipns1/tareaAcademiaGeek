@@ -302,3 +302,26 @@ body{
     color: #1D1D1D;
     margin-top: 40px;
 }
+
+
+//MODAL
+/* .modal-dialog {
+    width: 5000px !important;
+    border: 3px solid red;
+    display: flex !important;
+    justify-content: flex-end !important;
+} */
+
+#exampleModal{
+    border: 2px solid green;
+    float: right;
+}
+@media (min-width: 576px){
+    .modal-dialog {
+        width: 500px !important;
+        height: 800px !important;
+        float: right;
+        margin-top: 0 !important;
+        
+}
+}

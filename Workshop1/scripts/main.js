@@ -54,7 +54,7 @@ const mostrarProducto = async (producto, card) => {
             </form>
             <div class="btnDetail">
                 <button id="btnAgregar"  class="btnAgregar">Add to Cart</button>
-                <button id="btnComprar" class="btnComprar">But it Now</button>
+                <button id="btnComprar" data-mdb-target="#exampleModal" data-mdb-toggle="modal" class="btnComprar">But it Now</button>
             </div>
             <h3>${descripcion}</h3>
             <h4>Click for Sizing!</h4>
