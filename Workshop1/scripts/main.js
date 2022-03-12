@@ -42,6 +42,8 @@ const mostrarProducto =async (producto,card) => {
     <div> ${name} ${precio} 
     <a><img id=${id} class="btnimagen" src="${imagen[0]}" alt="imagen"></a>
     ${descripcion}</div>
+    <button class="btnAgregar"></button>
+    <button class="btnComprar"></button>
     `;
 }
 

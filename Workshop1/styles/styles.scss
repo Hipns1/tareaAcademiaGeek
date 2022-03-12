@@ -62,7 +62,6 @@ body{
 }
 
 .productContainer{
-    height: 400px;
     border: 2px solid red;
 }
 
@@ -92,4 +91,24 @@ body{
 .fb i:hover{
     transform: scale(2.1);
     color: blue;
+}
+.productShow{
+    border: 2px solid green;
+}
+
+
+.productContainer{
+    border: 2px solid red;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid forestgreen;
+}
+.cardContainer img{
+    height: 200px;
 }
