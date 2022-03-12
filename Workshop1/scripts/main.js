@@ -44,6 +44,7 @@ const mostrarProducto = async (producto, card) => {
         <div class="textDetail">
             <h1>${name}</h1>
             <h2>${precio} </h2>
+            <h5>Size</h5>
             <form>
                 <input type="radio" name="grupotallas" id="radio1">S
                 <input type="radio" name="grupotallas" id="radio2">M
@@ -51,8 +52,10 @@ const mostrarProducto = async (producto, card) => {
                 <input type="radio" name="grupotallas" id="radio4">XL
                 <input type="radio" name="grupotallas" id="radio5">XXL
             </form>
-            <button id="btnAgregar"  class="btnAgregar">Add to Cart</button>
-            <button id="btnComprar" class="btnComprar">But it Now</button>
+            <div class="btnDetail">
+                <button id="btnAgregar"  class="btnAgregar">Add to Cart</button>
+                <button id="btnComprar" class="btnComprar">But it Now</button>
+            </div>
             <h3>${descripcion}</h3>
             <h4>Click for Sizing!</h4>
         </div>

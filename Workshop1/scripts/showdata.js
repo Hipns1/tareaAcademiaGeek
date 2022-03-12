@@ -6,7 +6,7 @@ const showData = async (arrProductos, cards) => {
     <div class="cardContainer">
       <div class="cards">
         <div class="imgCard">
-          <a><img id=${id} class="btnimagen" src="${imagen}" alt="imagen"></a>
+          <a href="#home"><img id=${id} class="btnimagen" src="${imagen}" alt="imagen"></a>
         </div>
         <h2>${name}</h2>
         <h3>${precio}</h3>
