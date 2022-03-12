@@ -412,7 +412,6 @@ body {
     justify-content: flex-end !important;
 } */
 #exampleModal {
-  border: 2px solid green;
   float: right;
 }
 
@@ -426,26 +425,60 @@ body {
   }
 }
 
-.modal-content {
-  border: 2px solid black;
-}
-
 .modal-body {
   margin-bottom: 141% !important;
 }
 
 .imgCardCarrito {
-  border: 2px solid red;
+  width: 115px;
+  height: 115px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .cardsCarrito {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .imgCardCarrito img {
-  width: 100px;
-  height: 150px;
+  width: 115px;
+  height: 115px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.btnRemoveContainer {
+  width: 150px;
+  height: 50px;
+}
+
+.btnRemoveContainer button {
+  background-color: transparent;
+  text-decoration: underline;
+  font-size: 20px;
+  font-family: 'Poppins';
+  border: transparent;
+  float: right;
+}
+
+.productoTagsContainer {
+  margin-left: 20px;
+  font-size: 2px;
+}
+
+.btn-close {
+  height: 40px;
+  width: 40px;
+  border-radius: 50% !important;
+  background-color: white !important;
+  opacity: 200 !important;
+  float: right;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 /*# sourceMappingURL=styles.css.map */

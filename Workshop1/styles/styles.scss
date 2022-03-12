@@ -313,7 +313,6 @@ body{
 } */
 
 #exampleModal{
-    border: 2px solid green;
     float: right;
 }
 @media (min-width: 576px){
@@ -325,30 +324,49 @@ body{
         border-radius: 0px !important;    
     }
 }
-.modal-content{
-    border: 2px solid black;
-}
+
 .modal-body {
     margin-bottom: 141% !important;
 }
 
 .imgCardCarrito{
-    border: 2px solid red;
+    width: 115px;
+    height: 115px;
+    object-fit: cover;
 }
 .cardsCarrito{
     display: flex;
+    align-items: center;
+    
 }
 .imgCardCarrito img{
-    width: 100px;
-    height: 150px;
+    width: 115px;
+    height: 115px;
+    object-fit: cover;
 }
 .btnRemoveContainer  {
     width: 150px;
-    height: 50px;
-    background-color: gray;
-    border: 2px solid red !important;
+    height: 50px;  
 }
-.btnRemove {
-    color : red !important;
-    background-color: #4276FB !important;
+.btnRemoveContainer button{
+    background-color: transparent;
+    text-decoration: underline;
+    font-size: 20px;
+    font-family: 'Poppins';
+    border: transparent;
+    float: right;
+}
+.productoTagsContainer{
+    margin-left: 20px;
+    font-size: 2px;
+}
+.btn-close{
+    height: 40px;
+    width: 40px;
+    border-radius: 50% !important;
+    background-color: white !important;
+    opacity: 200 !important;
+    float: right;
+    margin-top: 10px;
+    margin-left: 10px;
 }
