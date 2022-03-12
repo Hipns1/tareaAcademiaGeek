@@ -1,11 +1,15 @@
 const showData = async (arrProductos, cards) => {
   const productos = await arrProductos;
   productos.forEach((product) => {
-    const { name, precio, imagen, descripcion, id } = product;
+    const { name, precio, imagen, id } = product;
     cards.innerHTML += `
-    <div> ${name} ${precio} 
-    <a><img id=${id} class="btnimagen" src="${imagen}" alt="imagen"></a>
-    ${descripcion}</div>
+    <div class="cardContainer">
+      <div class="cards">
+        <a><img id=${id} class="btnimagen" src="${imagen}" alt="imagen"></a>
+        <h2>${name}</h2>
+        <h3>${precio}</h3>
+      </div>
+    </div>
     `;
   });
 };
