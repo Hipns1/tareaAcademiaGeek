@@ -330,9 +330,25 @@ body{
 }
 .modal-body {
     margin-bottom: 141% !important;
-
 }
-.imgCardCarrito .btnimagen{
-    width : 100px !important;
-    height : 200px !important;
+
+.imgCardCarrito{
+    border: 2px solid red;
+}
+.cardsCarrito{
+    display: flex;
+}
+.imgCardCarrito img{
+    width: 100px;
+    height: 150px;
+}
+.btnRemoveContainer  {
+    width: 150px;
+    height: 50px;
+    background-color: gray;
+    border: 2px solid red !important;
+}
+.btnRemove {
+    color : red !important;
+    background-color: #4276FB !important;
 }

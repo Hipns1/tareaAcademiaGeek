@@ -62,38 +62,74 @@ const mostrarProducto = async (producto, card) => {
     </div>
     `;
 
-  const btnAgregar = document
-    .getElementById('btnAgregar')
-    .addEventListener('click', (e) => {
-      registro.push(productoseleccionado);
-      console.log({ registro });
-      // getLocalStorage()
-      localStorage.setItem('productos', JSON.stringify(registro));
+    const btnAgregar = document.getElementById('btnAgregar')
+    btnAgregar.addEventListener('click', (e) => {
+        registro.unshift(productoseleccionado)
+        localStorage.setItem('productos', JSON.stringify(registro));
     });
 
-  const btnComprar = document
-    .getElementById('btnComprar')
-    .addEventListener('click', (e) => {
-    const productosCarrito = JSON.parse(localStorage.getItem('productos'));
-    console.log(productosCarrito)
-    const modalCarrito = document.getElementById("modalCarrito")
-    modalCarrito.innerHTML= ""
-    productosCarrito.forEach((product) => {
-      const { name, precio, imagen, id } = product;
-      modalCarrito.innerHTML += `
-      <div class="cardContainer">
-        <div class="cards">
-          <div class="imgCardCarrito">
-          <img class="btnimagen" src="${imagen}" alt="imagen">
+   
+
+
+    const btnCarrito = document.getElementById("carrito");
+    btnCarrito.addEventListener('click', (e) => {
+        const productosCarrito = JSON.parse(localStorage.getItem('productos'));
+        const modalCarrito = document.getElementById("modalCarrito")
+        modalCarrito.innerHTML = "";
+        productosCarrito.forEach((product) => {
+        const { name, precio, imagen } = product;
+        modalCarrito.innerHTML += `
+        <div class="cardContainerCarrito">
+          <div class="cardsCarrito">
+            <div class="imgCardCarrito">
+              <img class="btnimagen" src="${imagen}" alt="imagen">
+            </div>
+            <div class="productoTagsContainer">
+              <h2>${name}</h2>
+              <h3>${precio}</h3>
+            </div>
+            <div class="btnRemoveContainer">
+              <button class="btnRemove">Remove</button>
+            </div>
           </div>
-          <h2>${name}</h2>
-          <h3>${precio}</h3>
         </div>
-      </div>
-      `;
-    });
-  });
+        `;
+      });
+    })
+
+
+
+   /*  const btnComprar = document.getElementById('btnComprar') */
+    
+    
+    /* btnComprar.addEventListener('click', (e) => {
+      const productosCarrito = JSON.parse(localStorage.getItem('productos'));
+      console.log(productosCarrito)
+      const modalCarrito = document.getElementById("modalCarrito")
+      productosCarrito.forEach((product) => {
+        const { name, precio, imagen, id } = product;
+        modalCarrito.innerHTML += `
+        <div class="cardContainerCarrito">
+          <div class="cardsCarrito">
+            <div class="imgCardCarrito">
+              <a href="#home"><img id=${id} class="btnimagen" src="${imagen}" alt="imagen"></a>
+            </div>
+            <h2>${name}</h2>
+            <h3>${precio}</h3>
+          </div>
+        </div>
+        `;
+      });
+    }); */
 };
+
+
+
+
+
+
+
+
 
 const getLocalStorage = () => {
   let traerProductos = JSON.parse(localStorage.getItem('productos'));
@@ -107,8 +143,13 @@ const getLocalStorage = () => {
             <div class="imgCardCarrito">
               <img class="btnimagen" src="${imagen}" alt="imagen">
             </div>
-            <h2>${name}</h2>
-            <h3>${precio}</h3>
+            <div class="productoTagsContainer">
+              <h2>${name}</h2>
+              <h3>${precio}</h3>
+            </div>
+            <div class="btnRemoveContainer">
+              <button class="btnRemove">Remove</button>
+            </div>
           </div>
         </div>
         `;

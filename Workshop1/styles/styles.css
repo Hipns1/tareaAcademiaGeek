@@ -433,4 +433,19 @@ body {
 .modal-body {
   margin-bottom: 141% !important;
 }
+
+.imgCardCarrito {
+  border: 2px solid red;
+}
+
+.cardsCarrito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.imgCardCarrito img {
+  width: 100px;
+  height: 150px;
+}
 /*# sourceMappingURL=styles.css.map */
