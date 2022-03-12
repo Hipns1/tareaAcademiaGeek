@@ -3,6 +3,7 @@ import showData from "./showdata.js"
 
 const urlproductos =  "https://ejemplo-backend.herokuapp.com/productos"
 const divcards = document.getElementById("productContainer")
+const divProductos = document.getElementById("mostrarSeleccionado")
 // registro de productos a agregados al carro
 const registro = []
 
@@ -27,7 +28,7 @@ divcards.addEventListener("click", async (e) => {
     if (btnImagen) {
         const productos = await getData(urlproductos)
         const productoseleccionado = productos.find(producto => producto.id == selector)
-        mostrarProducto(productoseleccionado,divcards)
+        mostrarProducto(productoseleccionado,divProductos)
     }
 }
 )
