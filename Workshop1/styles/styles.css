@@ -241,6 +241,7 @@ body {
 .carrouselDetail img {
   height: 100px;
   margin-left: 83px;
+  margin-top: 10px;
 }
 
 .imgPrincipalDetail {
@@ -433,6 +434,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5px;
 }
 
 .imgCardCarrito img {
@@ -459,6 +461,24 @@ body {
 .productoTagsContainer {
   margin-left: 20px;
   font-size: 2px;
+}
+
+.productoTagsContainer h2 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+  color: #1D1D1D;
+}
+
+.productoTagsContainer h3 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #1D1D1D;
 }
 
 .btn-close {
@@ -525,5 +545,32 @@ body {
   line-height: 24px;
   text-align: center;
   margin-top: 32px;
+}
+
+@media (max-width: 450px) {
+  .productoTagsContainer h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 32px;
+    color: #1D1D1D;
+  }
+  .productoTagsContainer h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 32px;
+    color: #1D1D1D;
+  }
+  .btnRemoveContainer button {
+    background-color: transparent;
+    text-decoration: underline;
+    font-size: 15px;
+    font-family: 'Poppins';
+    border: transparent;
+    float: right;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
