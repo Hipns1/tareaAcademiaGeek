@@ -318,15 +318,16 @@ body{
 }
 @media (min-width: 576px){
     .modal-dialog {
-        width: 500px !important;
-        height: 8000px !important;
+        width: 600px !important;
+        height: 90% !important;
         float: right;
-        margin-top: 0 !important;    
+        margin-top: 0 !important;
+        border-radius: 0px !important;    
     }
 }
 .modal-content{
     border: 2px solid black;
 }
 .modal-body {
-    padding: 100vh !important;
+    margin-bottom: 141% !important;
 }
