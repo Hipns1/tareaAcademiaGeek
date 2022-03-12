@@ -39,11 +39,31 @@ const mostrarProducto = async (producto, card) => {
   const { name, precio, imagen, descripcion, id } = productoseleccionado;
   document.getElementById('bannerContainer').style.display = 'none';
   card.innerHTML += `
-    <div> ${name} ${precio} 
-    <a><img id=${id} class="btnimagen" src="${imagen[0]}" alt="imagen"></a>
-    ${descripcion}</div>
-    <button id="btnAgregar"  class="btnAgregar">Add to Cart</button>
-    <button id="btnComprar" class="btnComprar">But it Now</button>
+    <div class="detailContainer">
+        <div class="carrouselDetail">
+            <a><img class="btnimagen" src="${imagen[0]}" alt="imagen"></a>
+            <a><img class="btnimagen" src="${imagen[1]}" alt="imagen"></a>
+            <a><img class="btnimagen" src="${imagen[2]}" alt="imagen"></a>
+        </div>
+        <div class="imgPrincipalDetail">
+            <a><img class="btnimagen" src="${imagen[0]}" alt="imagen"></a>
+        </div>
+        <div class="textDetail">
+            <h1>${name}</h1>
+            <h2>${precio} </h2>
+            <form>
+                <input type="radio" name="grupotallas" id="radio1">S
+                <input type="radio" name="grupotallas" id="radio2">M
+                <input type="radio" name="grupotallas" id="radio3">L
+                <input type="radio" name="grupotallas" id="radio4">XL
+                <input type="radio" name="grupotallas" id="radio5">XXL
+            </form>
+            <button id="btnAgregar"  class="btnAgregar">Add to Cart</button>
+            <button id="btnComprar" class="btnComprar">But it Now</button>
+            <h3>${descripcion}</h3>
+            <h4>Click for Sizing!</h4>
+        </div>
+    </div>
     `;
 
   const btnAgregar = document
