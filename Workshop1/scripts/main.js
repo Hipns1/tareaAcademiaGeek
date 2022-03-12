@@ -97,7 +97,7 @@ const mostrarProducto = async (producto, card) => {
 const getLocalStorage = () => {
   let traerProductos = JSON.parse(localStorage.getItem('productos'));
   const modalCarrito = document.getElementById("modalCarrito")
-    productosCarrito.forEach((product) => {
+    traerProductos.forEach((product) => {
       const { name, precio, imagen, id } = product;
       modalCarrito.innerHTML += `
       <div class="cardContainer">
