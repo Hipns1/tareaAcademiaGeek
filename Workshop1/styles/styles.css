@@ -405,12 +405,6 @@ body {
   margin-top: 40px;
 }
 
-/* .modal-dialog {
-    width: 5000px !important;
-    border: 3px solid red;
-    display: flex !important;
-    justify-content: flex-end !important;
-} */
 #exampleModal {
   float: right;
 }
@@ -423,10 +417,6 @@ body {
     margin-top: 0 !important;
     border-radius: 0px !important;
   }
-}
-
-.modal-body {
-  margin-bottom: 141% !important;
 }
 
 .imgCardCarrito {
@@ -480,5 +470,60 @@ body {
   float: right;
   margin-top: 10px;
   margin-left: 10px;
+}
+
+.btnCartModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.btnCartModal button {
+  height: 56px;
+  width: 90%;
+  background-color: #4276FB;
+  margin: auto;
+  color: white;
+  font-weight: bold;
+  border: none;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+
+.btnCartModal button:hover {
+  background-color: white;
+  color: #4276FB;
+  border: 2px solid #4276FB;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.btnCartModal h1 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.btnCartModal h2 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 32px;
 }
 /*# sourceMappingURL=styles.css.map */
