@@ -326,7 +326,8 @@ body{
 }
 .cardsCarrito{
     display: flex;
-    align-items: center;
+    align-items: space;
+    justify-content: space-between;
     margin-top: 5px;
     
 }
@@ -335,9 +336,12 @@ body{
     height: 115px;
     object-fit: cover;
 }
-.btnRemoveContainer  {
+.btnRemoveContainer {
     width: 150px;
     height: 50px;  
+    display: flex;
+    justify-content: flex-end;
+    float: right !important;
 }
 .btnRemoveContainer button{
     background-color: transparent;
