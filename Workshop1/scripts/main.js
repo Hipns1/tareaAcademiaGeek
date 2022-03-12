@@ -7,10 +7,12 @@ const divProductos = document.getElementById('mostrarSeleccionado');
 // registro de productos a agregados al carro
 const registro = [];
 
+
 document.addEventListener('DOMContentLoaded', async () => {
   const datos = await getData(urlproductos);
   showData(datos, divcards);
   getLocalStorage();
+  sumar();
 });
 
 divcards.addEventListener('click', async (e) => {
@@ -109,12 +111,14 @@ const mostrarProducto = async (producto, card) => {
     btnAgregar.addEventListener('click', (e) => {
         registro.unshift(productoseleccionado)
         localStorage.setItem('productos', JSON.stringify(registro));
+        sumar();
     });
 
 
 
     const btnCarrito = document.getElementById("carrito");
     btnCarrito.addEventListener('click', (e) => {
+        sumar();
         const productosCarrito = JSON.parse(localStorage.getItem('productos'));
         const modalCarrito = document.getElementById("modalCarrito")
         modalCarrito.innerHTML = "";
@@ -170,3 +174,16 @@ const getLocalStorage = () => {
         `;
     }
   )}; 
+
+  
+  const sumar = () => {
+    let traerProductos = JSON.parse(localStorage.getItem('productos'));
+    let suma = 0;
+    traerProductos.forEach((product) => {
+      const {precio} = product;
+      const precioNuevo = Number(precio.replace("$ ", ""))
+      suma += precioNuevo
+      console.log(suma) 
+  })
+  document.getElementById("total").innerHTML = `$${suma}`;
+}
