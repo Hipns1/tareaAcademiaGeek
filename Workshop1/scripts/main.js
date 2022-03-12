@@ -10,15 +10,8 @@ const registro = [];
 document.addEventListener('DOMContentLoaded', async () => {
   const datos = await getData(urlproductos);
   showData(datos, divcards);
+  getLocalStorage();
 });
-
-// const agregarCarro = document.getElementById("botonCarro").addEventListener("click", () => {
-
-//     registro.push(
-//     {nombre :  nombre,
-//     cantidad : cantidad})
-// }
-// )
 
 divcards.addEventListener('click', async (e) => {
   const btnImagen = e.target.classList.contains('btnimagen');
@@ -49,8 +42,10 @@ const mostrarProducto = async (producto, card) => {
   const btnAgregar = document
     .getElementById('btnAgregar')
     .addEventListener('click', (e) => {
-      registro.push('hola');
-      console.log(registro);
+      registro.push(productoseleccionado);
+      console.log({ registro });
+      // getLocalStorage()
+      localStorage.setItem('productos', JSON.stringify(registro));
     });
 
   const btnComprar = document
@@ -60,6 +55,15 @@ const mostrarProducto = async (producto, card) => {
     });
 };
 
-// btnAgregar.addEventListener('click', () => {
-
-// });
+// const getLocalStorage = () => {
+//   let traerProductos = JSON.parse(localStorage.getItem('productos'));
+//   const key = JSON.parse(localStorage.getItem('citas'));
+//   if (key !== null) {
+//     key.unshift(registrarCita);
+//     localStorage.setItem('citas', JSON.stringify(key));
+//   } else {
+//     citas.unshift(registrarCita);
+//     localStorage.setItem('citas', JSON.stringify(citas));
+//   }
+//   console.log(traerProductos);
+// };
