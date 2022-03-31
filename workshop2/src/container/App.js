@@ -1,11 +1,12 @@
-import Main from "../components/Main";
+import Main from '../components/Main'
+import { CardList } from '../components/CardList'
 
 function App() {
-  return (
-    <div className="App">
-      <Main/>
-    </div>
-  );
+	return (
+		<div className='App'>
+			<CardList />
+		</div>
+	)
 }
 
-export default App;
+export default App

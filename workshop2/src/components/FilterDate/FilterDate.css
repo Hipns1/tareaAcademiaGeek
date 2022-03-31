@@ -1,0 +1,31 @@
+.filterDate {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: scroll;
+  grid-auto-flow: column;
+  color: #76B900;
+}
+
+.filterBtn {
+  cursor: pointer;
+  border: none;
+  background-color: #76b900;
+  color: #fff;
+  width: 100px;
+  border-radius: 0.5rem;
+  height: 30px;
+}
+
+.filterInput {
+  display: flex;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.filterInput input {
+  margin: 0;
+}
