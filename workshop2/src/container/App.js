@@ -1,4 +1,4 @@
-import Main from '../components/Main'
+// import Main from '../components/Main'
 import { CardList } from '../components/CardList'
 
 function App() {
