@@ -1,12 +1,15 @@
-// import Main from '../components/Main'
+import FilterContainer from "../components/FilterContainer";
+import Main from "../components/Main";
 import { CardList } from '../components/CardList'
 
 function App() {
-	return (
-		<div className='App'>
-			<CardList />
-		</div>
-	)
-}
+  return (
+    <div className="App">
+      <Main/>
+      <FilterContainer/>
+      <CardList />
+    </div>
+  );
 
-export default App
+}
+export default App;
