@@ -1,8 +1,7 @@
 import { Card } from '../Card'
 import { FilterDate } from '../FilterDate'
 import useFilterData from '../hooks/useFilterData'
-// import { useGetData } from '../hooks/useGetData'
-import './CardList.css'
+
 export function CardList() {
 	// const { data } = useGetData()
 	const { filterData } = useFilterData()

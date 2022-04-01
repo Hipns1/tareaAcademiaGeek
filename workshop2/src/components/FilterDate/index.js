@@ -1,4 +1,4 @@
-import './FilterDate.css'
+
 export function FilterDate() {
 	const date = ['022-06-06', '022-06-06', '022-06-06', '022-06-06', '022-06-06']
 
