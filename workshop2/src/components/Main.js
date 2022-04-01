@@ -4,7 +4,7 @@ import { starCard } from "../helpers/starCard";
 import { url } from "../helpers/url";
 
 const Main = () => {
-  const [data, setData] = useState([]);
+  /* const [data, setData] = useState([]);
   useEffect(() => {
     getData(url).then((data) => {
       setData(data);
@@ -16,7 +16,7 @@ const Main = () => {
     console.log(localStorage.getItem("starred"));
 
     console.log(data);
-  }, [data]);
+  }, [data]); */
 
   return <div>Main</div>;
 };
