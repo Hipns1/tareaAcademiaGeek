@@ -1,40 +1,38 @@
+import { Link } from 'react-router-dom'
 import './CardStyles.css'
-export function Card() {
-	// const {title,description,speakers} = data
-	const data = [1, 2, 3]
+export function Card({ data = {} }) {
 	return (
 		<>
-			{data.map((item) => (
-				<article className='cardContainer' key={item}>
-					<div className='cardTitle'>
-						<h2>
-							Chief Operations Officer <span>⭐</span>
-						</h2>
-						<div className='cardDescription'>
-							<h3>Description:</h3>
-							<span>International</span>
-						</div>
-					</div>
-					<div>
-						<h3>Speakers</h3>
-						<div className='cardSpeakers'>
-							<span>Robin Price</span>
-							<span>Tomas Mosciski Sr.</span>
-							<span>Karl Torp</span>
-						</div>
-					</div>
-					<div className='cardDetails'>
-						<h3>Industry Segment: Creative</h3>
-						<h3>primary_topic: Garden</h3>
-						<h3>session_type:Strategist</h3>
-						<h3>audience_type:Trans*Female</h3>
-						<h3>lenguage:KW</h3>
-						<h3>audience_level:Assistant</h3>
-						<h3>date:2022-06-06</h3>
-					</div>
-					<button>Details</button>
-				</article>
-			))}
+			<div className='cardTitle'>
+				<h2>
+					{data.title} <span>⭐</span>
+				</h2>
+				<div className='cardDescription'>
+					<h3>Description:</h3>
+					<span>{data.description}</span>
+				</div>
+			</div>
+			<div>
+				<h3>Speakers</h3>
+				<div className='cardSpeakers'>
+					<div className=''>{data.speakers}</div>
+					{/* {data.speakers.map((speaker, index) => (
+						<span key={index}>{speaker}</span>
+					))} */}
+				</div>
+			</div>
+			<div className='cardDetails'>
+				<h3>Industry Segment: {data.industry_segment}</h3>
+				<h3>Primary Topic: {data.primary_topic}</h3>
+				<h3>Session Type: {data.session_type}</h3>
+				<h3>Audience Type: {data.industry_segment}</h3>
+				<h3>lenguage: {data.lenguage}</h3>
+				<h3>Audience Level:{data.audience_level}</h3>
+				<h3>Date: {data.date}</h3>
+			</div>
+			<button>
+				<Link to={`/details/${data.id}`}>Details</Link>
+			</button>
 		</>
 	)
 }
