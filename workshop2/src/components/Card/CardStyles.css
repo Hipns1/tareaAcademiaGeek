@@ -1,0 +1,37 @@
+.cardContainer {
+  display: grid;
+  gap: 1rem;
+}
+
+.cardTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: #76B900;
+}
+
+.cardTitle span {
+  cursor: pointer;
+}
+
+.cardDescription {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cardSpeakers {
+  display: flex;
+  gap: 1rem;
+}
+
+.cardDetails {
+  display: grid;
+}
+
+.cardDetails h3 {
+  background-color: #76B900;
+  color: #fff;
+  padding: 1rem;
+  border-radius: .5rem;
+}
