@@ -79,9 +79,7 @@ export const SelectContainer = styled.div`
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-top: 16px;
-    margin-left: 16px;
     @media (max-width: 1100px) {
-        margin-left: 0;
         justify-content: center;
     }
     button{
