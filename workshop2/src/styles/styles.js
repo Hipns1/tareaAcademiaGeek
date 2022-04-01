@@ -6,14 +6,26 @@ import { Link } from 'react-router-dom';
 //ESTILOS FILTROS GENERALES
 export const DivBody = styled.div`
     display: flex;
+    @media (max-width: 1100px) {
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+    }
 `
 export const DivFilterContainer = styled.div`
     margin-left: 50px;
+    @media (max-width: 1100px) {
+        width: 95%;
+        margin-left: 0;
+    }
 `
 
 
 //ESTILOS PARA EL COMPONENTE FILTERBUSQUEDA
 export const DivBusqueda = styled.div`
+    @media (max-width: 1100px) {
+        width: 100%;
+    }
     h1{
         margin-top: 16px;
         margin-left: 16px;
@@ -53,6 +65,12 @@ export const AccordionStyle = styled(Accordion)`
 //ESTILOS PARA EL COMPONENTE CONTENEDOR DE CARDS
 export const DivRight = styled.div`
     width: 70%;
+    margin-left: 16px;
+    @media (max-width: 1100px) {
+        width: 95%;
+        margin-left: 0;
+        margin-top: 16px;
+    }
 `
 
 //ESTILOS PARA EL FILTERDATE
@@ -62,6 +80,10 @@ export const SelectContainer = styled.div`
     justify-content: flex-start;
     margin-top: 16px;
     margin-left: 16px;
+    @media (max-width: 1100px) {
+        margin-left: 0;
+        justify-content: center;
+    }
     button{
         padding: 0px 20px;
         font-weight: 400;
@@ -82,7 +104,9 @@ export const InputDate = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    
+    @media (max-width: 1100px) {
+        margin-top: 16px;
+    }
     label{
         padding: 0px 20px;
         font-weight: 400;
@@ -91,6 +115,7 @@ export const InputDate = styled.div`
         letter-spacing: 0.005em;
         cursor: pointer;
         background-color: transparent;
+        border-bottom: 1px solid gray;
     }
     input{
         display: none;
@@ -110,7 +135,6 @@ export const InputDate = styled.div`
 // ESTILOS PARA EL COMPONENTE CARDS
 export const DivCards = styled.div`
     margin-top: 26px;
-    margin-left: 16px;
     background-color: white;
     padding: 20px;
     -webkit-box-shadow: 0px 0px 15px -3px #000000; 
@@ -127,7 +151,7 @@ export const DivTitle = styled.div`
 `
 export const LinkStyled = styled(Link)`
     text-decoration: none;
-` 
+`
 export const DivDescription = styled.div`
     margin-top: 10px;
     h3{
@@ -175,5 +199,17 @@ export const DivOthers = styled.div`
 
 //ESTILOS PARA EL COMPONENTE DETAILS
 export const DivDetails = styled.div`
-    padding: 50px;
+    padding: 100px;
+    padding-top: 50px;
+    @media (max-width: 768px) {
+        padding: 20px;
+    }
+    button{
+        border: 2px solid #76b900;
+        padding: 12px 15px 10px 10px;
+        background: #fff;
+        color: #76b900;
+        font-weight: bold;
+        cursor: pointer;
+    }
 `
