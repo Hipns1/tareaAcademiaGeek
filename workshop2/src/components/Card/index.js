@@ -1,36 +1,37 @@
+import { useGetData } from '../hooks/useGetData'
 import './CardStyles.css'
 export function Card() {
-	// const {title,description,speakers} = data
-	const data = [1, 2, 3]
+	const { data } = useGetData()
+	console.log(data[0])
 	return (
 		<>
-			{data.map((item) => (
-				<article className='cardContainer' key={item}>
+			{data.map((sessions) => (
+				<article className='cardContainer' key={sessions.id}>
 					<div className='cardTitle'>
 						<h2>
-							Chief Operations Officer <span>⭐</span>
+							{sessions.title} <span>⭐</span>
 						</h2>
 						<div className='cardDescription'>
 							<h3>Description:</h3>
-							<span>International</span>
+							<span>{sessions.description}</span>
 						</div>
 					</div>
 					<div>
 						<h3>Speakers</h3>
 						<div className='cardSpeakers'>
-							<span>Robin Price</span>
-							<span>Tomas Mosciski Sr.</span>
-							<span>Karl Torp</span>
+							{sessions.speakers.map((speaker, index) => (
+								<span key={index}>{speaker}</span>
+							))}
 						</div>
 					</div>
 					<div className='cardDetails'>
-						<h3>Industry Segment: Creative</h3>
-						<h3>primary_topic: Garden</h3>
-						<h3>session_type:Strategist</h3>
-						<h3>audience_type:Trans*Female</h3>
-						<h3>lenguage:KW</h3>
-						<h3>audience_level:Assistant</h3>
-						<h3>date:2022-06-06</h3>
+						<h3>Industry Segment: {sessions.industry_segment}</h3>
+						<h3>Primary Topic: {sessions.primary_topic}</h3>
+						<h3>Session Type: {sessions.session_type}</h3>
+						<h3>Audience Type: {sessions.industry_segment}</h3>
+						<h3>lenguage: {sessions.lenguage}</h3>
+						<h3>Audience Level:{sessions.audience_level}</h3>
+						<h3>Date: {sessions.date}</h3>
 					</div>
 					<button>Details</button>
 				</article>
