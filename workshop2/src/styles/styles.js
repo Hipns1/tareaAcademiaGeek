@@ -1,16 +1,13 @@
 import styled from "styled-components";
-import { InputBase } from '@mui/material';
 import Accordion from '@mui/material/Accordion';
 import { Link } from 'react-router-dom';
 
 
 //ESTILOS FILTROS GENERALES
 export const DivBody = styled.div`
-border: 2px solid black;
     display: flex;
 `
 export const DivFilterContainer = styled.div`
-    border: 2px solid red;
     margin-left: 50px;
 `
 
@@ -28,8 +25,7 @@ export const DivInput = styled.div`
     justify-content: center;
     align-items: center;
 `
-export const InputStyled = styled(InputBase)`
-    border: 2px solid black;
+export const InputStyled = styled.input`
     width: 90%;
     margin-top: 16px;
     border-radius: 20px;
@@ -56,7 +52,6 @@ export const AccordionStyle = styled(Accordion)`
 
 //ESTILOS PARA EL COMPONENTE CONTENEDOR DE CARDS
 export const DivRight = styled.div`
-    border: 2px solid red;
     width: 70%;
 `
 
@@ -161,4 +156,24 @@ export const DivSpeakers = styled.div`
         font-weight: 400;
         font-size: 16px;
     }
+`
+
+export const DivOthers = styled.div`
+    h3{
+        color: #444;
+        font-weight: 400;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 10px;
+        span{
+            color: #444;
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+`
+
+//ESTILOS PARA EL COMPONENTE DETAILS
+export const DivDetails = styled.div`
+    padding: 50px;
 `
