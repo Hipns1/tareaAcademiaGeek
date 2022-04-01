@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { DivFilterContainer } from '../styles/styles';
 import FilterBusqueda from './FilterBusqueda';
 import FilterCheck from './FilterCheck';
 
 const FilterContainer = () => {
     return (
-        <div>
+        <DivFilterContainer>
             <FilterBusqueda/>
             <FilterCheck/>
-        </div>
+        </DivFilterContainer>
     )
 }
 

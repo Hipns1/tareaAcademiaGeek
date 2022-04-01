@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Checkbox, FormControlLabel, FormGroup } from '@mui/material';
 import { getData } from '../helpers/getData';
+import { AccordionStyle, DivCheck } from '../styles/styles';
 
 const url = "https://workshop-2-nvidia.herokuapp.com/sessions/";
 
@@ -51,8 +52,8 @@ const FilterCheck = () => {
 
 
     return (
-        <div>
-            <Accordion>
+        <DivCheck>
+            <AccordionStyle>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
@@ -71,9 +72,9 @@ const FilterCheck = () => {
                         </FormGroup>
                     </Typography>
                 </AccordionDetails>
-            </Accordion>
+            </AccordionStyle>
 
-            <Accordion>
+            <AccordionStyle>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
@@ -92,9 +93,9 @@ const FilterCheck = () => {
                         </FormGroup>
                     </Typography>
                 </AccordionDetails>
-            </Accordion>
+            </AccordionStyle>
 
-            <Accordion>
+            <AccordionStyle>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel3a-content"
@@ -113,9 +114,9 @@ const FilterCheck = () => {
                         </FormGroup>
                     </Typography>
                 </AccordionDetails>
-            </Accordion>
+            </AccordionStyle>
 
-            <Accordion>
+            <AccordionStyle>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel4a-content"
@@ -134,9 +135,9 @@ const FilterCheck = () => {
                         </FormGroup>
                     </Typography>
                 </AccordionDetails>
-            </Accordion>
+            </AccordionStyle>
 
-            <Accordion>
+            <AccordionStyle>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel5a-content"
@@ -155,9 +156,9 @@ const FilterCheck = () => {
                         </FormGroup>
                     </Typography>
                 </AccordionDetails>
-            </Accordion>
+            </AccordionStyle>
 
-            <Accordion>
+            <AccordionStyle>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel6a-content"
@@ -176,8 +177,8 @@ const FilterCheck = () => {
                         </FormGroup>
                     </Typography>
                 </AccordionDetails>
-            </Accordion>
-        </div>
+            </AccordionStyle>
+        </DivCheck>
     )
 }
 
