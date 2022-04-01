@@ -7,10 +7,7 @@ const FilterBusqueda = () => {
             <DivBusqueda>
                 <h1>Filters</h1>
                 <DivInput>
-                    <InputStyled
-                        placeholder="Search"
-                        inputProps={{ 'aria-label': 'search' }}
-                    />
+                    <InputStyled placeholder="Search"/>
                 </DivInput>
             </DivBusqueda>
         </div>

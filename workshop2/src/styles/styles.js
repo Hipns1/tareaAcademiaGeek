@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { InputBase } from '@mui/material';
 import Accordion from '@mui/material/Accordion';
 import { Link } from 'react-router-dom';
 
@@ -26,7 +25,7 @@ export const DivInput = styled.div`
     justify-content: center;
     align-items: center;
 `
-export const InputStyled = styled(InputBase)`
+export const InputStyled = styled.input`
     width: 90%;
     margin-top: 16px;
     border-radius: 20px;
@@ -172,4 +171,9 @@ export const DivOthers = styled.div`
             font-size: 16px;
         }
     }
+`
+
+//ESTILOS PARA EL COMPONENTE DETAILS
+export const DivDetails = styled.div`
+    padding: 50px;
 `
