@@ -1,14 +1,13 @@
+import { DivRight } from '../../styles/styles'
 import { Card } from '../Card'
 import { FilterDate } from '../FilterDate'
 import useFilterData from '../hooks/useFilterData'
-// import { useGetData } from '../hooks/useGetData'
-import './CardList.css'
+
 export function CardList() {
-	// const { data } = useGetData()
 	const { filterData } = useFilterData()
 
 	return (
-		<section className=''>
+		<DivRight>
 			<FilterDate />
 			<div className='cardListGrid'>
 				{filterData.map((sessions) => (
@@ -17,6 +16,6 @@ export function CardList() {
 					</article>
 				))}
 			</div>
-		</section>
+		</DivRight>
 	)
 }

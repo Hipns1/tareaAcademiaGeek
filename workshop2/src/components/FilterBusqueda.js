@@ -1,20 +1,18 @@
-import React from 'react'
-import SearchIcon from '@mui/icons-material/Search';
-import { InputBase } from '@mui/material';
+import { DivBusqueda, DivInput, InputStyled } from '../styles/styles';
 
 const FilterBusqueda = () => {
 
     return (
         <div>
-            <div>
-                <InputBase
-                    placeholder="Search…"
-                    inputProps={{ 'aria-label': 'search' }}
-                />
-                <div>
-                    <SearchIcon />
-                </div>
-            </div>
+            <DivBusqueda>
+                <h1>Filters</h1>
+                <DivInput>
+                    <InputStyled
+                        placeholder="Search"
+                        inputProps={{ 'aria-label': 'search' }}
+                    />
+                </DivInput>
+            </DivBusqueda>
         </div>
     )
 }
