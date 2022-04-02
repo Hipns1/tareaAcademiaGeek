@@ -50,7 +50,7 @@ const FilterCheck = () => {
   let language = [...arrayLanguageSolo];
 
   // PRUEBA BORRAR
-  let resultLanguage = [];
+  let resultFilter = [];
   return (
     <div>
       <Accordion>
@@ -70,19 +70,19 @@ const FilterCheck = () => {
                   control={<Checkbox />}
                   onChange={(e) => {
                     if (e.target.checked === true) {
-                      resultLanguage.push(
+                      resultFilter.push(
                         filterCheckBox(data, arr, "industry_segment", [], "add")
                       );
-                      console.log(resultLanguage);
+                      console.log(resultFilter);
                     } else {
-                      resultLanguage = filterCheckBox(
+                      resultFilter = filterCheckBox(
                         data,
                         arr,
                         "industry_segment",
-                        resultLanguage,
+                        resultFilter,
                         "remove"
                       );
-                      console.log(resultLanguage);
+                      console.log(resultFilter);
                     }
                   }}
                   label={arr}
@@ -111,19 +111,19 @@ const FilterCheck = () => {
                   value={arr}
                   onChange={(e) => {
                     if (e.target.checked === true) {
-                      resultLanguage.push(
+                      resultFilter.push(
                         filterCheckBox(data, arr, "primary_topic", [], "add")
                       );
-                      console.log(resultLanguage);
+                      console.log(resultFilter.flat());
                     } else {
-                      resultLanguage = filterCheckBox(
+                      resultFilter = filterCheckBox(
                         data,
                         arr,
                         "primary_topic",
                         [],
                         "remove"
                       );
-                      console.log(resultLanguage);
+                      console.log(resultFilter);
                     }
                   }}
                   label={arr}
@@ -152,19 +152,19 @@ const FilterCheck = () => {
                   value={arr}
                   onChange={(e) => {
                     if (e.target.checked === true) {
-                      resultLanguage.push(
+                      resultFilter.push(
                         filterCheckBox(data, arr, "session_type", [], "add")
                       );
-                      console.log(resultLanguage);
+                      console.log(resultFilter);
                     } else {
-                      resultLanguage = filterCheckBox(
+                      resultFilter = filterCheckBox(
                         data,
                         arr,
                         "session_type",
-                        resultLanguage,
+                        resultFilter,
                         "remove"
                       );
-                      console.log(resultLanguage);
+                      console.log(resultFilter);
                     }
                   }}
                   label={arr}
@@ -193,19 +193,19 @@ const FilterCheck = () => {
                   value={arr}
                   onChange={(e) => {
                     if (e.target.checked === true) {
-                      resultLanguage.push(
+                      resultFilter.push(
                         filterCheckBox(data, arr, "audience_type", [], "add")
                       );
-                      console.log(resultLanguage);
+                      console.log(resultFilter);
                     } else {
-                      resultLanguage = filterCheckBox(
+                      resultFilter = filterCheckBox(
                         data,
                         arr,
                         "audience_type",
-                        resultLanguage,
+                        resultFilter,
                         "remove"
                       );
-                      console.log(resultLanguage);
+                      console.log(resultFilter);
                     }
                   }}
                   label={arr}
@@ -234,19 +234,19 @@ const FilterCheck = () => {
                   value={arr}
                   onChange={(e) => {
                     if (e.target.checked === true) {
-                      resultLanguage.push(
+                      resultFilter.push(
                         filterCheckBox(data, arr, "audience_level", [], "add")
                       );
-                      console.log(resultLanguage);
+                      console.log(resultFilter);
                     } else {
-                      resultLanguage = filterCheckBox(
+                      resultFilter = filterCheckBox(
                         data,
                         arr,
                         "audience_level",
-                        resultLanguage,
+                        resultFilter,
                         "remove"
                       );
-                      console.log(resultLanguage);
+                      console.log(resultFilter);
                     }
                   }}
                   label={arr}
@@ -276,20 +276,20 @@ const FilterCheck = () => {
                   value={arr}
                   onChange={(e) => {
                     if (e.target.checked === true) {
-                      resultLanguage.push(
+                      resultFilter.push(
                         filterCheckBox(data, arr, "lenguage", [], "add")
                       );
-                      console.log(resultLanguage);
+                      console.log(resultFilter);
                     } else {
-                      resultLanguage = filterCheckBox(
+                      resultFilter = filterCheckBox(
                         data,
                         arr,
                         "lenguage",
-                        resultLanguage,
+                        resultFilter,
                         "remove"
                       );
 
-                      console.log(resultLanguage);
+                      console.log(resultFilter);
                       console.log("no está seleccionado");
                       // console.log(new Date("2022-06-06T07:07:52.355Z"));
                     }
