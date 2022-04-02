@@ -1,15 +1,11 @@
-import FilterContainer from "../components/FilterContainer";
-import Main from "../components/Main";
-import { CardList } from '../components/CardList'
+import { AppRoutes } from '../routes/AppRoutes';
+import "../styles/styles.css";
 
 function App() {
-  return (
-    <div className="App">
-      <Main/>
-      <FilterContainer/>
-      <CardList />
-    </div>
-  );
-
+	return (
+		<div className='App'>
+			<AppRoutes />
+		</div>
+	)
 }
-export default App;
+export default App

@@ -1,21 +1,20 @@
-// import { useState } from 'react'
-import './FilterDate.css'
-export function FilterDate() {
-	const date = ['022-06-06', '022-06-06', '022-06-06', '022-06-06', '022-06-06']
-	// const [query, setQuery]= useState('')
+import { InputDate, SelectContainer } from "../../styles/styles"
 
-	// 	const filterGame =
-	// 		sessions.filter((data) => data.title.toLowerCase().includes(query.toLowerCase())) || sessions
+export function FilterDate() {
+	const date = ['Mon, Mar 21', 'Mon, Mar 21', 'Mon, Mar 21', 'Mon, Mar 21', 'Mon, Mar 21']
 
 	return (
-		<section className='filterDate'>
-			<button className='filterBtn'>All Data</button>
+		<SelectContainer >
+			<InputDate >
+				<input className="Iselect" id="tag" type='radio' name='tag'/>
+				<label htmlFor="tag">All data</label>
+			</InputDate>
 			{date.map((item, index) => (
-				<div className='filterInput' key={index}>
-					<input type='radio' id='huey' name='tag' value={item} />
-					<label htmlFor={item}>{item}</label>
-				</div>
+				<InputDate key={index}>
+					<input className="Iselect" type='radio' id={index} name='tag' value={item} />
+					<label htmlFor={index}>{item}</label>
+				</InputDate>
 			))}
-		</section>
+		</SelectContainer>
 	)
 }

@@ -1,13 +1,21 @@
+import { DivRight } from '../../styles/styles'
 import { Card } from '../Card'
 import { FilterDate } from '../FilterDate'
-import './CardList.css'
+import useFilterData from '../hooks/useFilterData'
+
 export function CardList() {
+	const { filterData } = useFilterData()
+
 	return (
-		<section className=''>
+		<DivRight>
 			<FilterDate />
 			<div className='cardListGrid'>
-				<Card />
+				{filterData.map((sessions) => (
+					<article className='cardContainer' key={sessions.id}>
+						<Card data={sessions} />
+					</article>
+				))}
 			</div>
-		</section>
+		</DivRight>
 	)
 }

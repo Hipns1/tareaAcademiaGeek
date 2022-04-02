@@ -1,40 +1,28 @@
-import './CardStyles.css'
-export function Card() {
-	// const {title,description,speakers} = data
-	const data = [1, 2, 3]
+
+import { DivCards, DivDescription, DivOthers, DivSpeakers, DivTitle, LinkStyled } from '../../styles/styles'
+
+export function Card({ data = {} }) {
 	return (
-		<>
-			{data.map((item) => (
-				<article className='cardContainer' key={item}>
-					<div className='cardTitle'>
-						<h2>
-							Chief Operations Officer <span>⭐</span>
-						</h2>
-						<div className='cardDescription'>
-							<h3>Description:</h3>
-							<span>International</span>
-						</div>
-					</div>
-					<div>
-						<h3>Speakers</h3>
-						<div className='cardSpeakers'>
-							<span>Robin Price</span>
-							<span>Tomas Mosciski Sr.</span>
-							<span>Karl Torp</span>
-						</div>
-					</div>
-					<div className='cardDetails'>
-						<h3>Industry Segment: Creative</h3>
-						<h3>primary_topic: Garden</h3>
-						<h3>session_type:Strategist</h3>
-						<h3>audience_type:Trans*Female</h3>
-						<h3>lenguage:KW</h3>
-						<h3>audience_level:Assistant</h3>
-						<h3>date:2022-06-06</h3>
-					</div>
-					<button>Details</button>
-				</article>
-			))}
-		</>
+		<DivCards>
+			<DivTitle>
+				<LinkStyled to={`/details/${data.id}`}><h1>{data.title} </h1></LinkStyled>
+				<span>⭐</span>
+			</DivTitle>
+			<DivDescription>
+				<h3>Description: <span>{data.description}</span></h3>
+			</DivDescription>
+			<DivSpeakers>
+				<h1>{data.speakers}</h1>	
+			</DivSpeakers>
+			<DivOthers>
+				<h3>Industry Segment: <span>{data.industry_segment}</span></h3>
+				<h3>Primary Topic: <span>{data.primary_topic}</span></h3>
+				<h3>Session Type: <span>{data.session_type}</span></h3>
+				<h3>Audience Type: <span>{data.industry_segment}</span></h3>
+				<h3>lenguage: <span>{data.lenguage}</span></h3>
+				<h3>Audience Level: <span>{data.audience_level}</span></h3>
+				<h3>Date: <span>{data.date}</span></h3>
+			</DivOthers>
+		</DivCards>
 	)
 }
