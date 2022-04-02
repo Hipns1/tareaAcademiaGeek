@@ -1,10 +1,10 @@
-import { useState, useRef } from 'react'
-import { useGetData } from './useGetData'
+import { useState, useRef, useContext, useEffect } from 'react'
+import { AppContext } from '../../context/AppContext'
 
 export default function useFilterData() {
+	const { data, setData } = useContext(AppContext)
 	const [query, setQuery] = useState('')
 	const inputRef = useRef('')
-	const { data } = useGetData()
 
 	const getQuery = () => {
 		const { current } = inputRef
@@ -12,11 +12,12 @@ export default function useFilterData() {
 		setQuery(value)
 	}
 
-	let filterData =
-		data.filter((data) => data.title.toLowerCase().includes(query.toLowerCase())) || data
+	useEffect(() => {
+		let filterData =
+			data.filter((data) => data.title.toLowerCase().includes(query.toLowerCase())) || data
+		setData(filterData)
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [query])
 
-	console.log(query)
-	console.log(filterData)
-
-	return { query, inputRef, filterData, getQuery, setQuery }
+	return { query, inputRef, getQuery, setQuery }
 }
