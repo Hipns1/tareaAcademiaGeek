@@ -8,6 +8,7 @@ export function AppRoutes() {
 		<BrowserRouter>
 			<Routes>
 				<Route path='/' element={<Home />} />
+				<Route path='/:date' element={<Home />} />
 				<Route exact path='/details/:id' element={<Details />} />
 			</Routes>
 		</BrowserRouter>
