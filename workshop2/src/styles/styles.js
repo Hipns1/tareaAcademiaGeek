@@ -76,7 +76,7 @@ export const DivRight = styled.div`
 //ESTILOS PARA EL FILTERDATE
 export const SelectContainer = styled.div`
     display: flex;
-    flex-wrap: wrap;
+    overflow: auto;
     justify-content: flex-start;
     margin-top: 16px;
     @media (max-width: 1100px) {
@@ -101,11 +101,12 @@ export const InputDate = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    
     @media (max-width: 1100px) {
         margin-top: 16px;
     }
     label{
+        width: 150px;
         padding: 0px 20px;
         font-weight: 400;
         font-size: 14px;
@@ -114,12 +115,10 @@ export const InputDate = styled.div`
         cursor: pointer;
         background-color: transparent;
         border-bottom: 1px solid gray;
+        text-align: center;
     }
     input{
         display: none;
-        :checked +label:after{
-            background-color: #2CB67D;
-        }
         :checked +label{
             background-color: transparent;
             border-bottom: 4px solid #76b900;

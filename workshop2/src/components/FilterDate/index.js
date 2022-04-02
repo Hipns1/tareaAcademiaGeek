@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { AppContext } from '../../context/AppContext'
 import { filterDate } from '../../helpers/filterDate'
 import { getData } from '../../helpers/getData'
 import { url } from '../../helpers/url'
-import { InputDate, SelectContainer } from '../../styles/styles'
+import { InputDate, LinkStyled, SelectContainer } from '../../styles/styles'
 
 export function FilterDate() {
 	const { data, setData } = useContext(AppContext)
@@ -40,9 +40,9 @@ export function FilterDate() {
 					<InputDate key={id}>
 						<input className='Iselect' type='radio' id={index} name='tag' value={date} />
 						<label htmlFor={index}>
-							<Link to={`/${date}`} value={formatDate}>
+							<LinkStyled to={`/${date}`} value={formatDate}>
 								{`${month} ${year}`}
-							</Link>
+							</LinkStyled>
 						</label>
 					</InputDate>
 				)
