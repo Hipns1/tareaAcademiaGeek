@@ -8,6 +8,7 @@ import { Checkbox, FormControlLabel, FormGroup } from '@mui/material'
 import { getData } from '../helpers/getData'
 import { filterCheckBox } from '../helpers/filterCheckBox'
 import { AppContext } from '../context/AppContext'
+import { DivCheck } from '../styles/styles'
 
 const url = 'https://workshop-2-nvidia.herokuapp.com/sessions/'
 
@@ -56,7 +57,7 @@ const FilterCheck = () => {
 	let language = [...arrayLanguageSolo]
 
 	return (
-		<div>
+		<DivCheck>
 			<Accordion>
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
@@ -313,7 +314,7 @@ const FilterCheck = () => {
 					</Typography>
 				</AccordionDetails>
 			</Accordion>
-		</div>
+		</DivCheck>
 	)
 }
 
