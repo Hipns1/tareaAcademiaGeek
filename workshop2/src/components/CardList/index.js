@@ -1,16 +1,17 @@
+import { useContext } from 'react'
+import { AppContext } from '../../context/AppContext'
 import { DivRight } from '../../styles/styles'
 import { Card } from '../Card'
 import { FilterDate } from '../FilterDate'
-import useFilterData from '../hooks/useFilterData'
 
 export function CardList() {
-	const { filterData } = useFilterData()
+	const { data } = useContext(AppContext)
 
 	return (
 		<DivRight>
 			<FilterDate />
 			<div className='cardListGrid'>
-				{filterData.map((sessions) => (
+				{data.map((sessions) => (
 					<article className='cardContainer' key={sessions.id}>
 						<Card data={sessions} />
 					</article>
