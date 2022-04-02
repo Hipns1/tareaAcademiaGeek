@@ -7,8 +7,8 @@ export function useGetQuery() {
 	const { current } = Inputref
 
 	const getQuery = () => {
-		const query = current
-		console.log(query)
+		const query = current.value
+		setQuery(query)
 	}
 	return { Inputref, getQuery }
 }

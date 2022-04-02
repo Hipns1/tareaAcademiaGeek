@@ -5,6 +5,7 @@ import useFilterData from '../hooks/useFilterData'
 
 export function CardList() {
 	const { filterData } = useFilterData()
+	console.log(filterData)
 
 	return (
 		<DivRight>
