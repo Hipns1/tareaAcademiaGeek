@@ -7,6 +7,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
 import { getData } from "../helpers/getData";
 import { filterCheckBox } from "../helpers/filterCheckBox";
+import { DivCheck } from "../styles/styles";
 
 const url = "https://workshop-2-nvidia.herokuapp.com/sessions/";
 
@@ -52,7 +53,7 @@ const FilterCheck = () => {
   // PRUEBA BORRAR
   let resultLanguage = [];
   return (
-    <div>
+    <DivCheck>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -301,7 +302,7 @@ const FilterCheck = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-    </div>
+    </DivCheck>
   );
 };
 
