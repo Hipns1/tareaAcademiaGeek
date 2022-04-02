@@ -68,7 +68,23 @@ const FilterCheck = () => {
                 <FormControlLabel
                   key={arr}
                   control={<Checkbox />}
-                  onChange={() => filterCheckBox(data, arr, "industry_segment")}
+                  onChange={(e) => {
+                    if (e.target.checked === true) {
+                      resultLanguage.push(
+                        filterCheckBox(data, arr, "industry_segment", [], "add")
+                      );
+                      console.log(resultLanguage);
+                    } else {
+                      resultLanguage = filterCheckBox(
+                        data,
+                        arr,
+                        "industry_segment",
+                        resultLanguage,
+                        "remove"
+                      );
+                      console.log(resultLanguage);
+                    }
+                  }}
                   label={arr}
                 />
               ))}
@@ -93,7 +109,23 @@ const FilterCheck = () => {
                   key={arr}
                   control={<Checkbox />}
                   value={arr}
-                  onChange={() => filterCheckBox(data, arr, "primary_topic")}
+                  onChange={(e) => {
+                    if (e.target.checked === true) {
+                      resultLanguage.push(
+                        filterCheckBox(data, arr, "primary_topic", [], "add")
+                      );
+                      console.log(resultLanguage);
+                    } else {
+                      resultLanguage = filterCheckBox(
+                        data,
+                        arr,
+                        "primary_topic",
+                        [],
+                        "remove"
+                      );
+                      console.log(resultLanguage);
+                    }
+                  }}
                   label={arr}
                 />
               ))}
@@ -118,7 +150,23 @@ const FilterCheck = () => {
                   key={arr}
                   control={<Checkbox />}
                   value={arr}
-                  onChange={() => filterCheckBox(data, arr, "session_type")}
+                  onChange={(e) => {
+                    if (e.target.checked === true) {
+                      resultLanguage.push(
+                        filterCheckBox(data, arr, "session_type", [], "add")
+                      );
+                      console.log(resultLanguage);
+                    } else {
+                      resultLanguage = filterCheckBox(
+                        data,
+                        arr,
+                        "session_type",
+                        resultLanguage,
+                        "remove"
+                      );
+                      console.log(resultLanguage);
+                    }
+                  }}
                   label={arr}
                 />
               ))}
@@ -143,7 +191,23 @@ const FilterCheck = () => {
                   key={arr}
                   control={<Checkbox />}
                   value={arr}
-                  onChange={() => filterCheckBox(data, arr, "audience_type")}
+                  onChange={(e) => {
+                    if (e.target.checked === true) {
+                      resultLanguage.push(
+                        filterCheckBox(data, arr, "audience_type", [], "add")
+                      );
+                      console.log(resultLanguage);
+                    } else {
+                      resultLanguage = filterCheckBox(
+                        data,
+                        arr,
+                        "audience_type",
+                        resultLanguage,
+                        "remove"
+                      );
+                      console.log(resultLanguage);
+                    }
+                  }}
                   label={arr}
                 />
               ))}
@@ -168,7 +232,23 @@ const FilterCheck = () => {
                   key={arr}
                   control={<Checkbox />}
                   value={arr}
-                  onChange={() => filterCheckBox(data, arr, "audience_level")}
+                  onChange={(e) => {
+                    if (e.target.checked === true) {
+                      resultLanguage.push(
+                        filterCheckBox(data, arr, "audience_level", [], "add")
+                      );
+                      console.log(resultLanguage);
+                    } else {
+                      resultLanguage = filterCheckBox(
+                        data,
+                        arr,
+                        "audience_level",
+                        resultLanguage,
+                        "remove"
+                      );
+                      console.log(resultLanguage);
+                    }
+                  }}
                   label={arr}
                 />
               ))}
