@@ -6,7 +6,7 @@ export function Card({ data = {} }) {
 		<DivCards>
 			<DivTitle>
 				<LinkStyled to={`/details/${data.id}`}><h1>{data.title} </h1></LinkStyled>
-				<span>⭐</span>
+				<span onClick={() => starCard(data)}>⭐</span>
 			</DivTitle>
 			<DivDescription>
 				<h3>Description: <span>{data.description}</span></h3>
